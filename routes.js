@@ -10,6 +10,10 @@ router.get('/curso/:id', (req, res) => {
     const curso = cursos.filter( curso => curso.codigo === id_curso );
     res.send(curso);
 });
+router.get('/curso', (req, res) => {
+    const id_curso = req.params.id;
+    res.send(cursos);
+});
 
 
 module.exports = router;
